@@ -1,5 +1,7 @@
+from .models import Station, StationTag
 from django import forms
-from .models import Station
+from django.forms import formset_factory, inlineformset_factory
+
 
 class StationRainModelForm(forms.ModelForm):
     class Meta:
@@ -16,5 +18,3 @@ class StationRainModelForm(forms.ModelForm):
                 'class': 'form-control',
             }),
         }
-
-
